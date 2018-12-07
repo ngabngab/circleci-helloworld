@@ -1,7 +1,8 @@
 witmy: &witmy
   docker:
     - image: circleci/node:8.11
-  working_directory: ~/build
+  working_directory: ~/circleci-helloworld
+
 version: 2
 jobs:
   build:
@@ -31,7 +32,7 @@ jobs:
     <<: *witmy
     steps:
       - attach_workspace:
-          at: ~/build
+          at: ~/circleci-helloworld
 
       - run:
           name: Deploy Master to Firebase
