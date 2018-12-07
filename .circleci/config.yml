@@ -32,7 +32,7 @@ jobs:
     <<: *witmy
     steps:
       - attach_workspace:
-          at: ~/circleci-helloworl
+          at: ~/circleci-helloworld
 
       - run:
           name: Deploy Master to Firebase
