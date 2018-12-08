@@ -37,7 +37,7 @@ jobs:
 
       - run:
           name: Deploy Master to Firebase
-          command: ./node_modules/.bin/firebase deploy --token=1/xpDj0Do_wQNmFoC-bYm-cQCEYwXEocHdKd2wEsub_2Y
+          command: ./node_modules/.bin/firebase deploy --token=1/uMdGb0FRiXEgMI9oE6T4R3S1pyHmsVKP6EgX6iRSk1k
 
 workflows:
   version: 2
