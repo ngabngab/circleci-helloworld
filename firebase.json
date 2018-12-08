@@ -1,10 +1,6 @@
 {
   "hosting": {
-<<<<<<< HEAD
-    "public": "public",
-=======
     "public": "build",
->>>>>>> parent of 264f5a2... test
     "ignore": [
       "**/.*",
       "**/node_modules/**"
