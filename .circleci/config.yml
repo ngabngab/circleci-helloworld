@@ -1,8 +1,7 @@
 witmy: &witmy
   docker:
     - image: circleci/node:8.11
-  working_directory: ~/src
-
+    
 version: 2
 jobs:
   build:
@@ -28,15 +27,17 @@ jobs:
 
       - persist_to_workspace:
           root: .
+          paths:
+          - .
   deploy:
     <<: *witmy
     steps:
       - attach_workspace:
-          at: ~/src
+          at: .
 
       - run:
           name: Deploy Master to Firebase
-          command: ./node_modules/.bin/firebase deploy --token=1/xpDj0Do_wQNmFoC-bYm-cQCEYwXEocHdKd2wEsub_2Y
+          command: ./node_modules/.bin/firebase deploy --token=MY_TOKEN
 
 workflows:
   version: 2
